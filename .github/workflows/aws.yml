@@ -35,7 +35,7 @@ env:
   ECR_REPOSITORY: 552887875838.dkr.ecr.us-east-1.amazonaws.com           # set this to your Amazon ECR repository name
   ECS_SERVICE: dd-servise-name                 # set this to your Amazon ECS service name
   ECS_CLUSTER: Second-attempt                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: start-awesome-dd-server # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: .github/workflows/start-awesome-dd-server-revision2.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: awesome-dd-server           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
