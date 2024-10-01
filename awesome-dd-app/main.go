@@ -10,6 +10,7 @@ func main() {
     router := gin.Default()
     router.GET("/albums", getAlbums)
     router.GET("/hello-world", getHelloWorld)
+    router.GET("/greet-arnold", getGreetArnold)
     router.GET("/status", getStatus)
 
     router.Run(":8080")
@@ -41,6 +42,11 @@ func getAlbums(c *gin.Context) {
 
 func getHelloWorld(c *gin.Context) {
     hw := helloWorld{Body: "awesome-dd-app"}
+    c.IndentedJSON(http.StatusOK, hw)
+}
+
+func getGreetArnold(c *gin.Context) {
+    hw := helloWorld{Body: "Hey Argold!"}
     c.IndentedJSON(http.StatusOK, hw)
 }
 
